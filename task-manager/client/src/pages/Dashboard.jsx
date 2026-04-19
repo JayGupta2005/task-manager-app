@@ -12,7 +12,7 @@ function Dashboard() {
   const user = localStorage.getItem("user");
 
   const fetchTasks = async () => {
-    const res = await axios.get("http://localhost:5000/api/tasks", {
+    const res = await axios.get("https://task-manager-app-dxuq.onrender.com/api/tasks", {
       headers: { Authorization: `Bearer ${token}` },
     });
     setTasks(res.data);
@@ -22,7 +22,7 @@ function Dashboard() {
     if (!title) return;
 
     await axios.post(
-      "http://localhost:5000/api/tasks",
+      "https://task-manager-app-dxuq.onrender.com/api/tasks",
       { title },
       { headers: { Authorization: `Bearer ${token}` } }
     );
@@ -32,7 +32,7 @@ function Dashboard() {
   };
 
   const deleteTask = async (id) => {
-    await axios.delete(`http://localhost:5000/api/tasks/${id}`, {
+    await axios.delete(`https://task-manager-app-dxuq.onrender.com/api/tasks/${id}`, {
       headers: { Authorization: `Bearer ${token}` },
     });
     fetchTasks();
@@ -40,7 +40,7 @@ function Dashboard() {
 
   const updateTask = async (id) => {
     await axios.put(
-      `http://localhost:5000/api/tasks/${id}`,
+      `https://task-manager-app-dxuq.onrender.com/api/tasks/${id}`,
       { title: editText },
       { headers: { Authorization: `Bearer ${token}` } }
     );
@@ -53,7 +53,7 @@ function Dashboard() {
   // ✅ Toggle Complete
   const toggleComplete = async (task) => {
     await axios.put(
-      `http://localhost:5000/api/tasks/${task._id}`,
+      `https://task-manager-app-dxuq.onrender.com/api/tasks/${task._id}`,
       { completed: !task.completed },
       { headers: { Authorization: `Bearer ${token}` } }
     );
