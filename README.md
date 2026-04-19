@@ -6,8 +6,8 @@ A modern full-stack Task Manager web application with authentication, task manag
 
 ## 🌐 Live Demo
 
-🔗 Frontend: https://your-app.vercel.app  
-🔗 Backend: https://your-backend.onrender.com  
+🔗 Frontend: https://task-manager-app-tau-gules.vercel.app/
+🔗 Backend: https://task-manager-app-dxuq.onrender.com
 
 ---
 
